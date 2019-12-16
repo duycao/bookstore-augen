@@ -6,7 +6,7 @@ The backend is implemented by using asp.net core 3.0.
 It provides Api to get the books and buy book
 
  1. Api Get Books: this api support to get the data from multiple reources like : restful api, json, csv so, I create IBookEnquiryService interface and 3 concrete class BookEnquiryApiService, BookEnquiryCSVService, 
-BookEnquiryCSVService to implement this interface. This design follow Single Responsibility Principle and Open/Closed Principle. Now the problem is that when I use DI, I cannot select the right service to get the books. To resolve that, I created ServiceProvider to select the right service to get the books.
+BookEnquiryCSVService to implement this interface. This design follow Single Responsibility Principle and Open/Closed Principle. Now the problem is that when I use DI, I cannot select the right service to get the books. To resolve that, I created ServiceProvider to solve the problem.
 2. Api buy book: this api is used to create random information of delivery.
 
 ## Front End
