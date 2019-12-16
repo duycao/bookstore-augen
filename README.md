@@ -11,7 +11,7 @@ BookEnquiryCSVService to implement this interface. This design follow Single Res
 
 ## Front End
 - The front end code is totally implemented by using Vuejs. I thinks VueJS mixes the Best of Angular + React. 
-- This source code is kept in separate from backend code because it's development period. 
+- This source code is kept in separate from backend code because it's in development period. 
 - To run this project, you can follow the readme inside the folder bookstore-client.
 - Please note that you must run the project backend first and then run the front end project.
 - You should use VSCode to open the front end project.
