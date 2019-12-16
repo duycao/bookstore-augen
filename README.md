@@ -10,5 +10,7 @@ BookEnquiryCSVService to implement this interface. This design follow Single Res
 2. Api buy book: this api is used to create random information of delivery.
 
 ## Front End
-The front end code is totally implemented by using Vuejs. I thinks VueJS mixes the Best of Angular + React. This source code is kept in separate from backend code because it's development period. To run this project, please follow the readme inside the folder bookstore-client.
+The front end code is totally implemented by using Vuejs. I thinks VueJS mixes the Best of Angular + React. 
+This source code is kept in separate from backend code because it's development period. To run this project, please follow the readme inside the folder bookstore-client.
 Please note that you must run the project backend first and then run the front end project.
+Please use VSCode to open the front end project.
