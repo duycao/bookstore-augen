@@ -48,7 +48,7 @@ export default {
                 alert('please input text to search');
                 return;
             }
-            this.$http.get("http://localhost:6001/books?text="+this.textSearch)
+            this.$http.get(`${this.$rootApi}/books?text=${this.textSearch}`)
                         .then(response=> {
                             return response.json()
                         })

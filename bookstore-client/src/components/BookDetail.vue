@@ -54,7 +54,7 @@ export default {
     methods: {
         buyBook(service,cost) {
             const buyBookModel = {DeliveryService: service,DeliveryCost:cost};
-            this.$http.post("http://localhost:6001/books",buyBookModel)
+            this.$http.post(`${this.$rootApi}/books`,buyBookModel)
                     .then(response=> {
                         return response.json()
                     })

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
+Vue.prototype.$rootApi = process.env.VUE_APP_ROOT_API
 Vue.use(BootstrapVue)
 Vue.use(VueResource)
 
