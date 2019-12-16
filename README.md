@@ -2,7 +2,7 @@
 
 ## Back End Source Code
 
-The backend is implemented by using asp.net core 3.0.
+The backend is implemented by using .net core 3.0.
 It provides Api to get the books and buy book
 
  1. Api Get Books: this api support to get the data from multiple reources like : restful api, json, csv so, I create IBookEnquiryService interface and 3 concrete class BookEnquiryApiService, BookEnquiryCSVService, 
