@@ -1,7 +1,7 @@
 <template>
-  <b-modal id="bv-modal-example" hide-footer>
-    <template v-slot:modal-title v-if="book.volumeInfo">
-      {{book.volumeInfo.title}}
+  <b-modal id="bv-modal" hide-footer>
+    <template v-slot:modal-title v-if="book">
+      <h1>{{book.volumeInfo.title}}</h1>
     </template>
     <div class="d-block text-center" v-if="book.volumeInfo">
       <b-card-group deck>
@@ -45,10 +45,14 @@
 
 <script>
 export default {
-    props: ['book'],
     data: function() {
         return {
             buyResponse: ""
+        }
+    },
+    computed: { 
+        book() {
+            return this.$store.state.book
         }
     },
     methods: {
@@ -63,7 +67,9 @@ export default {
     },
     mounted() {
         this.$root.$on('bv::modal::hide', () => {
-        this.buyResponse="";
+            this.buyResponse="";
+        })
+        this.$root.$on('bv::modal::show', () => {
         })
     }
 }

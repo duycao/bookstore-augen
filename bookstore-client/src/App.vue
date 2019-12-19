@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
-    <app-list-book @selectedBook="selectBook"></app-list-book>
-    <app-book-detail :book="book"></app-book-detail>
+    <app-list-book></app-list-book>
+    <app-book-detail></app-book-detail>
   </div>
 </template>
 
@@ -10,19 +10,21 @@ import ListBook from './components/ListBook'
 import BookDetail from "./components/BookDetail";
 export default {
   name: 'app',
-  data: function() {
+  data() {
     return {
-      book: {}
+      //selectedBook: this.$store.state.book
     }
+  },
+  computed: {
+    selectedBook() {
+      return this.$store.state.book
+    } 
   },
   components: {
     appListBook: ListBook,
     appBookDetail: BookDetail
   },
   methods: {
-    selectBook(book) {
-      this.book = book;
-    }
   }
 }
 </script>

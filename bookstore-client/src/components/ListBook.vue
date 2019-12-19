@@ -1,10 +1,10 @@
 <template>
 <div>
     <div class="row mb-2">
-        <div class="col-md-11">
+        <div class="col-md-10">
             <b-form-input @keyup.enter="fetchBooks" v-model="textSearch" placeholder="find books"></b-form-input>
         </div>
-        <div class="col-md-1 text-left">
+        <div class="col-md-2 text-left">
             <b-button block variant="primary" @click="fetchBooks">Find</b-button>
         </div>
     </div>
@@ -34,14 +34,13 @@ export default {
     data: function() {
         return {
             textSearch: '',
-            book: {},
             books: []
         }
     },
     methods: {
         selectBook(book) {
-            this.$emit('selectedBook',book);
-            this.$bvModal.show('bv-modal-example');
+            this.$store.state.book = book;
+            this.$bvModal.show('bv-modal');
         },
         fetchBooks() {
             if(!this.textSearch) {
